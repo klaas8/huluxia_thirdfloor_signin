@@ -55,7 +55,7 @@ class HuluxiaSignin:
         config = {
             "webhook_url": os.getenv("WECHAT_ROBOT_URL"),  # 企业微信机器人 Webhook 地址
             "smtp_server": "smtp.qq.com",  # SMTP 服务器地址 默认QQ邮箱
-            "port": 465  # SMTP 端口号
+            "port": 587  # SMTP 端口号
         }
         if notifier_type == "email":
             # 从环境变量获取邮箱配置
