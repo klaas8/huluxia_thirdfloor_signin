@@ -22,10 +22,11 @@ for acc in accounts_str.split('\n'):
 huluxia_signin_obj = HuluxiaSignin()
 
 # 遍历账号进行签到
-for phone, password in accounts:
+for idx, (phone, password) in enumerate(accounts, 1):
     try:
         huluxia_signin_obj.huluxia_signin(phone, password)
         logger.info(f"账号 {phone} 签到成功")
     except Exception as e:
         logger.error(f"账号 {phone} 签到失败: {e}")
-    time.sleep(60)  # 每次签到间隔60秒
+    if idx < len(accounts):
+        time.sleep(60)  # 每次签到间隔60秒
