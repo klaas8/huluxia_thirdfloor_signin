@@ -6,8 +6,8 @@ from logger import logger
 # 检查环境变量
 accounts_str = os.getenv('ACCOUNTS')
 if not accounts_str:
-    logger.error("环境变量 ACCOUNTS 未设置")
-    raise ValueError("环境变量 ACCOUNTS 未设置")
+    logger.error("环境变量 ACCOUNTS  未设置")
+    raise ValueError("环境变量 ACCOUNTS  未设置")
 
 # 解析账号信息，去除空行和异常格式
 accounts = []
